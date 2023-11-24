@@ -34,7 +34,7 @@ class ManzanaController extends Controller
             'precioKilo' => $request->input('precioKilo')
         ]);
 
-        return redirect()->route('VerManzanas');
+        return redirect()->route('VerManzanas.index');
     }
 
     /**
@@ -65,7 +65,7 @@ class ManzanaController extends Controller
             'precioKilo' => $request->input('precioKilo')
         ]);
 
-        return redirect()->route('VerManzanas');
+        return redirect()->route('VerManzanas.index');
     }
 
     /**
@@ -77,6 +77,6 @@ class ManzanaController extends Controller
 
         $manzana->delete();
 
-        return redirect()->route('VerManzanas');
+        return redirect()->route('VerManzanas.index');
     }
 }
