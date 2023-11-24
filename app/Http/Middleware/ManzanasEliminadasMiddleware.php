@@ -18,7 +18,7 @@ class ManzanasEliminadasMiddleware
     public function handle(Request $request, Closure $next): Response
     {
         $manzana = Manzana::where('id', $request->input('manzana_id'))->first();
-        Log::info('Se ha eliminado la manzana con el id' + $manzana->tipoManzana);
+        Log::info('Se ha eliminado la manzana ' + $manzana->tipoManzana);
         return $next($request);
     }
 }
