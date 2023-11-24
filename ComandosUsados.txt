@@ -1,0 +1,5 @@
+sail php artisan make:model -mrc Manzana
+
+sail php artisan migrate
+
+sail php artisan make:middleware ManzanasEliminadasMiddleware
